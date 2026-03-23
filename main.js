@@ -187,3 +187,12 @@ contactForm.addEventListener("submit", (e) => {
       console.error("EmailJS error:", error);
     });
 });
+
+const downloadCv = document.getElementById("download-cv");
+
+downloadCv.addEventListener("click", (e) => {
+  const aElement = document.createElement("a");
+  aElement.setAttribute("download", "Ayomide_CV.pdf"); // this is the downloaded file name
+  aElement.setAttribute("href", "assets/CV.pdf"); // must match where you uploaded it
+  aElement.click();
+});
